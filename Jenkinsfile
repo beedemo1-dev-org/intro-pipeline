@@ -1,3 +1,6 @@
+environment {
+      MY_NAME = 'Mary'
+   }
 pipeline {
   agent {
     label 'jdk9'
@@ -5,7 +8,7 @@ pipeline {
   stages {
     stage('Say Hello') {
       steps {
-        echo 'Hello World'
+        cho "Hello ${MY_NAME}!"
         sh 'java -version'
       }
     }
